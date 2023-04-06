@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  
+
+
+  <link rel="stylesheet" href="dautay.css">
+  <!-- for popover -->
+  <script src="js/popper.min.js"></script>
+  <!-- animate -->
+  <link rel="stylesheet" href="js/animate-wow-hover/animate.css">
+  <script src="js/animate-wow-hover/wow.min.js"></script>
+  <!-- fontawaresome -->
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- for bootstrap -->
+  <link rel="stylesheet" href="js/css-bootstrap/bootstrap.min.css">
+  <script src="js/js-bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="js/js-bootstrap/bootstrap.min.js"></script>
+  <script src="dautay.js"></script>
+</head>
+<script type="text/javascript">
+// $(document).ready(function(){
+
+//  if($(".navbar-toggler").hasClass("collapsed")){
+//   $(".black-cover-adder").width("280px");
+//  }else{
+//   $(".black-cover-adder").width("0px");
+//  }
+
+// })
+
+</script>
+
+<body>
+  <!-- begin header -->
+  <!-- begin header-main -->
+  <div class="header-main">
+    <div class="black-cover" id="black-cover">
+      <div class="black-cover-inside">
+
+      </div>
+    </div>
+    <div class="black-cover-adder" id="black-cover-adder">
+      <div class="bc-wrap-inside">
+        <div class="bc-content"></div>
+      </div>
+    </div>
+    <!-- begin -head -->
+    <div class="container-fluid header-head"  id="navbar">
+      <div class="row justify-content-center" >
+        <div class="col-md-12">
+          <nav class="navbar navbar-expand-lg bg-transparent" >
+            <a class="navbar-brand" href="#" ><img src="images/Logo-oars-01.png" alt=""></a>
+            <button class="navbar-toggler" id="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()"> 
+              <span class="header-main-button-collapse"></span>
+              <span class="header-main-button-collapse"></span>
+              <span class="header-main-button-collapse"></span>
+            </button>
+            <button class="navbar-toggler-close" id="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="closeNav()"><i class="fas fa-times"></i></button>
+            <script type="text/javascript">
+              function closeNav(){
+                document.getElementById("black-cover-adder").style.width="0px";
+                // document.getElementById("black-cover-adder").style.animation="slideOutLeft 0.3s";
+                document.getElementById("black-cover").style.visibility="hidden";
+                document.getElementById("black-cover").style.opacity="0";
+                
+                
+                document.getElementById("navbarSupportedContent").style.width="0px";
+              }
+            </script>
+            <script type="text/javascript">
+              function openNav(){
+              //   if(document.getElementById("black-cover-adder").style.width=="0px"){
+
+              //   //  document.getElementById("black-cover-adder").style.width="0px";
+              //   //  document.getElementById("black-cover-adder").style.animation="slideOutLeft 0.5s";
+              //   //  document.getElementById("black-cover").style.visibility="hidden";
+              //   // document.getElementById("black-cover").style.opacity="0";
+              // }
+              // else if(document.getElementById("black-cover-adder").style.width=="280"){
+                // document.getElementById("black-cover-adder").style.animation="slideInLeft 0.3s";
+                document.getElementById("black-cover-adder").style.width="280px";
+                document.getElementById("black-cover").style.visibility="visible";
+                document.getElementById("black-cover").style.opacity="0.6";
+                
+                document.getElementById("navbarSupportedContent").style.width="280px";
+
+              // }
+            }
+          </script>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <div class="collapse-search">
+            <input type="type" placeholder="Type your search..." name="">
+            </div>
+            <ul class="navbar-nav mr-auto ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./product.html">shop</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link " href="./blog.html">blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./connect.html">contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./about_us.html">about us</a>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+        <!-- <div class="animated infinite bounce"><i class="fas fa-shopping-basket"></i></div> -->
+      </div>
+    </div>
+  </div>
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+      function myFunction(x){
+        if(x.matches){
+          document.getElementById("navbar").style.top = "0";
+           document.getElementById("navbar").style.padding = "0px";
+        }
+        else{
+          var currentScrollPos = window.pageYOffset;
+          if (document.body.scrollTop >0  || document.documentElement.scrollTop >0 ) {
+            if (prevScrollpos > currentScrollPos) {
+              document.getElementById("navbar").style.top = "0";
+              document.getElementById("navbar").style.background = "#ffffff";
+              document.getElementById("navbar").style.padding = "15px 0px";
+              document.getElementById("navbar").style.boxShadow="0 3px 7px -3px rgba(0,0,0,.1)";
+
+            } else {
+              document.getElementById("navbar").style.top = "-97px";
+            }
+
+
+            prevScrollpos = currentScrollPos;
+
+          } else 
+          {
+            document.getElementById("navbar").style.padding = "25px 0px";
+            document.getElementById("navbar").style.background = "transparent";
+            document.getElementById("navbar").style.boxShadow="none";
+            document.getElementById("navbar").style.boxShadow="none";
+          }
+        }
+      }
+      var x=window.matchMedia("(max-width:991px)")
+      myFunction(x);
+      x.addListener(myFunction);
+
+    }
+  </script>
+  <!-- end head -->
+</div><!-- end header-main -->
+
+    <!-- begin about us -->
+
+    <div class="about-us">  
+      <div class="about-us-head">
+        <div class="container"> 
+          <div class="row justify-content-center  "> 
+            <div class="col-md-9 about-head-sub text-center wow fadeInLeft" data-wow-duration="1.3s">
+              <h4 class="textstyle"> About Us</h4>
+              <h2>Who we are</h2>
+              <div class="about-head-sub-img">  <img src="images/below-heading.png" alt=""></div>
+              <div class="about-head-sub-content">
+                Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-us-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.3s">
+
+                  <div class="auc-img"><img src="images/icon-box-1.png" alt=""></div>
+                  <h3 class="auc-title under-headling">Natural Farm</h3>
+                  <p class="auc-content">Lorem ipsum dolor sit amet
+                  consectetur adipiscing elit felis euismod sempe.</p>
+                </div>
+                <div class="col-md-6  wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s">
+                  <div class="auc-img"><img src="images/icon-box-2.png" alt=""></div>
+                  <h3 class="auc-title under-headling">Healthy Food</h3>
+                  <p class="auc-content">Lorem ipsum dolor sit amet
+                  consectetur adipiscing elit felis euismod sempe.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.3s">
+                  <div class="auc-img"><img src="images/icon-box-3.png" alt=""></div>
+                  <h3 class="auc-title under-headling">Conserves Biodiversity</h3>
+                  <p class="auc-content">Lorem ipsum dolor sit amet
+                  consectetur adipiscing elit felis euismod sempe.</p>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1.3s">
+                  <div class="auc-img"><img src="images/icon-box-4.png" alt=""></div>
+                  <h3 class="auc-title under-headling">Biologically Safe</h3>
+                  <p class="auc-content">Lorem ipsum dolor sit amet
+                  consectetur adipiscing elit felis euismod sempe.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end about us -->
+    <!-- begin core-Features -->
+    <div class="core-features">
+      <div class="container-fluid">
+        <div class="row core-features-flex">
+          <div class="col-lg-7 text-right">
+            <!-- .bridge hay ho -->
+            <div class="bridge"></div>
+            <div class="box1 wow fadeInLeft" data-wow-duration="1.3s">
+              <img class="img-fluid" src="images/bg-core-featured.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="box2">
+              <div class="box2-content wow fadeInRight" data-wow-duration="1.3s">
+                <div class="box2-head">
+                  <h4 class="textstyle">Core Features</h4>
+                  <h2>What is Oars Store?</h2>
+                  <div class="box2-img"><img src="images/below-heading.png" alt=""></div>
+                  <p>Cras mattis consectetur purus sit amet fermentum. Praesent vel scelerisque nisl consectetur et.</p>
+                </div>
+                <div class="box2-body">
+                  <div class="container">
+                    <!-- begin container -->
+
+                    <div class="row">
+                      <div class="core-features-img">
+                        <img class="" src="  images/icon-box-5.png" alt="">
+                      </div>
+                      <div class="core-features-content">
+                        <div class="core-features-content-wrap">
+                          <h4>Free Shipping</h4>
+                          <p>With $100 or more orders. Go to Oars Store</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="core-features-img">
+                        <img class="" src="  images/icon-box-6.png" alt="">
+                      </div>
+                      <div class="core-features-content">
+                        <div class="core-features-content-wrap">
+                          <h4>100% Organic Certified</h4>
+                          <p>100% Organic Cerfitifed Food & Textiles</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="core-features-img">
+                        <img class="" src="  images/icon-box-7.png" alt="">
+                      </div>
+                      <div class="core-features-content">
+                        <div class="core-features-content-wrap">
+                          <h4>Secure Payment</h4>
+                          <p>Sercure Confirmed</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="core-features-img">
+                        <img class="" src="  images/icon-box-8.png" alt="">
+                      </div>
+                      <div class="core-features-content">
+                        <div class="core-features-content-wrap">
+                          <h4>Friendly Support</h4>
+                          <p>Need help : +(12) 124 987 97</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end container -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end core-Features -->
+    <!-- begin step -->
+    <div class="step">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="container-fluid step-box-1">
+              <div class="row">
+                <div class="col-md-6 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0s">
+                  <div class="step-content">
+                    <img src="images/icon-process-1.png" alt="">
+                    <h4>Step 01.</h4>
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.1s">
+                  <div class="step-content">
+                    <img src="images/icon-process-2.png" alt="">
+                    <h4>Step 02.</h4>
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="container-fluid step-box-2">
+              <div class="row">
+
+
+                <div class="col-md-6 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+                  <div class="step-content">
+                    <img src="images/icon-process-3.png" alt="">
+                    <h4>Step 03.</h4>
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
+                  <div class="step-content">
+                    <img src="images/icon-process-4.png" alt="">
+                    <h4>Step 04.</h4>
+                    <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end step -->
+
+
+
+
+
+      <!-- begin footer -->
+      <div class="footer">
+       
+        <div class="footer-wrapper">
+       
+          <div class="information">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-8 col-md-6 contact">
+                        <div class="inf-head ">
+                          <h4 class="under-headling">Contact Our Farm</h4>
+                        </div>
+                        <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                        <ul>
+                          <li><a href="#"><i class="fas fa-map-marker-alt"></i></a>PO Box 16122 Collins Street West</li>
+                          <li><a href="#"><i class="fas fa-phone-square-alt"></i></a>+(1100) 1989 1994 0901</li>
+                          <li><a href="#"><i class="far fa-paper-plane"></i></a>ndhfit@gmail.com</li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-4 col-md-6 follow">
+                        <div class="inf-head "><h4 class="under-headling">Follow Me</h4></div>
+                        <ul>
+                          <li><i class="fab fa-facebook-f"></i><a href="">Facebook</a></li>
+                          <li><i class="fab fa-twitter"></i><a href="">Twitter</a></li>
+                          <li><i class="fab fa-instagram"></i><a href="">Instagram</a></li>
+                          <li><i class="fas fa-rss"></i><a href="">RSS Feed</a></li>
+                          <li><i class="fab fa-pinterest"></i><a href="">Pinterest</a></li>
+                          <li><i class="fab fa-linkedin-in"></i><a href="">LinkedIn</a></li>
+                          <li><i class="fab fa-behance"></i><a href="">Behance</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6 userfullink">
+                        <div class="inf-head ">
+                          <h4 class="under-headling">Userful Link</h4>
+                        </div>
+                        <ul>
+                          <li><a href="">About Us</a></li>
+                          <li><a href="">Portfolio</a></li>
+                          <li><a href="">Terms Of Service</a></li>
+                          <li><a href="">Privacy Policy</a></li>
+                          <li><a href="">Contact us</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-8 col-md-6 oars">
+                        <div class="inf-oars-wrap">
+                          <div class="inf-oars text-center">
+                            <div class="inf-wrap-sub">
+                              <div class="inf-logo">
+                                <img src="images/Logo-oars-01.png" alt="">
+                              </div>
+                              <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Curabitur blandit tempusporttitor nullam quis.</p>
+                              <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="oars-img-left">
+                            <img src="images/footer-4-right.png" alt="">
+                          </div>
+                          <div class="oars-img-right">
+                            <img src="images/footer_4_left.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-end text-center">
+
+          © 2017 <span>OARS ORGANIC</span>. All Rights Reserved. Designed. Design by <a href="#">G5THEME</a>
+
+        </div>
+
+        <!-- end footer -->
+</body>
+</html>
