@@ -16,7 +16,7 @@
   <script src="js/animate-wow-hover/wow.min.js"></script>
   <!-- fontawaresome -->
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- for bootstrap -->
   <link rel="stylesheet" href="js/css-bootstrap/bootstrap.min.css">
   <script src="js/js-bootstrap/bootstrap.bundle.min.js"></script>
@@ -93,7 +93,7 @@
               // }
             }
           </script>
-               <script type="text/javascript">
+             <script type="text/javascript">
           $(document).ready(function(){
               const navs = document.querySelectorAll('.nav-item');
               const hostname = window.location.pathname;
@@ -115,7 +115,7 @@
               })
 })
         </script>
-                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <div class="collapse-search">
             <input type="type" placeholder="Type your search..." name="">
             </div>
@@ -143,7 +143,28 @@
 
           </div>
         </nav>
-    
+           <script type="text/javascript">
+          $(document).ready(function(){
+              const navs = document.querySelectorAll('.nav-item');
+              const hostname = window.location.pathname;
+              const namePageArr = hostname.split('/');
+              const namePage = namePageArr[namePageArr.length - 1];
+              navs && navs.forEach((nav, index) => {
+                const hrefTag = nav.querySelector('.nav-link');
+              
+
+                if(hrefTag.getAttribute('href').includes(namePage)){
+                  nav.classList.add('active');
+                }else {
+                  nav.classList.remove('active');
+                }
+                nav.onclick = () => {
+                  navs.forEach((navItem, indexItem) => navItem.classList.remove('active'));
+                  nav.classList.add('active')
+                }
+              })
+})
+        </script>
         <!-- <div class="animated infinite bounce"><i class="fas fa-shopping-basket"></i></div> -->
       </div>
     </div>
@@ -190,155 +211,154 @@
   <!-- end head -->
 </div><!-- end header-main -->
 
-    <!-- begin about us -->
-
-    <div class="about-us">  
-      <div class="about-us-head">
-        <div class="container"> 
-          <div class="row justify-content-center  "> 
-            <div class="col-md-9 about-head-sub text-center wow fadeInLeft" data-wow-duration="1.3s">
-              <h4 class="textstyle"> About Us</h4>
-              <h2>Who we are</h2>
-              <div class="about-head-sub-img">  <img src="images/below-heading.png" alt=""></div>
-              <div class="about-head-sub-content">
-                Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="about-us-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.3s">
-
-                  <div class="auc-img"><img src="images/icon-box-1.png" alt=""></div>
-                  <h3 class="auc-title under-headling">Natural Farm</h3>
-                  <p class="auc-content">Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit felis euismod sempe.</p>
-                </div>
-                <div class="col-md-6  wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s">
-                  <div class="auc-img"><img src="images/icon-box-2.png" alt=""></div>
-                  <h3 class="auc-title under-headling">Healthy Food</h3>
-                  <p class="auc-content">Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit felis euismod sempe.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="row">
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1.3s">
-                  <div class="auc-img"><img src="images/icon-box-3.png" alt=""></div>
-                  <h3 class="auc-title under-headling">Conserves Biodiversity</h3>
-                  <p class="auc-content">Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit felis euismod sempe.</p>
-                </div>
-                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1.3s">
-                  <div class="auc-img"><img src="images/icon-box-4.png" alt=""></div>
-                  <h3 class="auc-title under-headling">Biologically Safe</h3>
-                  <p class="auc-content">Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit felis euismod sempe.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- end about us -->
-    <!-- begin core-Features -->
-    <div class="core-features">
-      <div class="container-fluid">
-        <div class="row core-features-flex">
-          <div class="col-lg-7 text-right">
-            <!-- .bridge hay ho -->
-            <div class="bridge"></div>
-            <div class="box1 wow fadeInLeft" data-wow-duration="1.3s">
-              <img class="img-fluid" src="images/bg-core-featured.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="box2">
-              <div class="box2-content wow fadeInRight" data-wow-duration="1.3s">
-                <div class="box2-head">
-                  <h4 class="textstyle">Core Features</h4>
-                  <h2>What is Oars Store?</h2>
-                  <div class="box2-img"><img src="images/below-heading.png" alt=""></div>
-                  <p>Cras mattis consectetur purus sit amet fermentum. Praesent vel scelerisque nisl consectetur et.</p>
-                </div>
-                <div class="box2-body">
-                  <div class="container">
-                    <!-- begin container -->
-
-                    <div class="row">
-                      <div class="core-features-img">
-                        <img class="" src="  images/icon-box-5.png" alt="">
-                      </div>
-                      <div class="core-features-content">
-                        <div class="core-features-content-wrap">
-                          <h4>Free Shipping</h4>
-                          <p>With $100 or more orders. Go to Oars Store</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="core-features-img">
-                        <img class="" src="  images/icon-box-6.png" alt="">
-                      </div>
-                      <div class="core-features-content">
-                        <div class="core-features-content-wrap">
-                          <h4>100% Organic Certified</h4>
-                          <p>100% Organic Cerfitifed Food & Textiles</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="core-features-img">
-                        <img class="" src="  images/icon-box-7.png" alt="">
-                      </div>
-                      <div class="core-features-content">
-                        <div class="core-features-content-wrap">
-                          <h4>Secure Payment</h4>
-                          <p>Sercure Confirmed</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="core-features-img">
-                        <img class="" src="  images/icon-box-8.png" alt="">
-                      </div>
-                      <div class="core-features-content">
-                        <div class="core-features-content-wrap">
-                          <h4>Friendly Support</h4>
-                          <p>Need help : +(12) 124 987 97</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- end container -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- end core-Features -->
- 
 
 
-
-
-
-      <!-- begin footer -->
+   <!-- begin footer -->
       <div class="footer">
-       
+        <!-- begin footer head -->
+
+        <div class="footer-head">
+          <div class="container-fluid">
+            <div class="row footer-head-row justify-content-start">
+              <div class="col-lg-6  footer-head-img text-right">
+               <div class="space-footer head"></div>
+
+               <div class="figure wow fadeInLeft" data-wow-duration="1.3s">
+                <img class="img-fluid" src="images/why-choose-us-1.png" alt=""></div>
+
+              </div>
+              <!-- <div class="separate"></div> -->
+              <div class="col-lg-4 footer-head-box2 wow fadeInRight" data-wow-duration="1.3s">
+
+                <div class="fh-content float-left">
+                  <div class="fh-content-head">
+                    <h4 class="textstyle">
+                      What is Oars Store?
+                    </h4>
+                    <h4 class="nth-child-2">Why we are the best</h4>
+                    <div class="fh-content-head"> 
+                      <img src="images/below-heading.png" alt=""></div>
+                      <p>Cras mattis consectetur purus sit amet fermentum. Praesent vel scelerisque nisl consectetur et.</p>
+                    </div>
+                    <div class="fh-content-body">
+                      <!-- b4-accordian -->
+                      <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fas fa-angle-right"></i>
+                                Get creative with courgettes
+                              </button>
+                            </h2>
+                          </div>
+
+                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Ut fermentum massa justo sit amet risus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-angle-right"></i>
+                                Italian style meatballs with courgette ‘tagliatelle’
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Ut fermentum massa justo sit amet risus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><i class="fas fa-angle-right"></i>
+                                How to fillet round fish (mackerel, trout, etc.)
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Ut fermentum massa justo sit amet risus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFour">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-angle-right"></i>
+                                Irish fish chowder with soda bread
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Ut fermentum massa justo sit amet risus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFive">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo"><i class="fas fa-angle-right"></i>
+                                Equipment you will need for this technique
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Ut fermentum massa justo sit amet risus tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>  
+
+                      <!-- end b4-accordian -->
+
+
+                    </div>
+                    <div class="footer-head-separate"></div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end footer head -->
         <div class="footer-wrapper">
-       
+          <div class="subcribe">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-6">
+                  <h4 class="textstyle">
+                    Subscribe
+                  </h4>
+                  <h4 class="title">Subscribe Newsletter</h4>
+                </div>
+                <div class="col-lg-6 subcribe-box">
+                  <!-- b4-button-addon -->
+
+                  <div class="subcribe-input-box">
+                    <input type="text"  placeholder="Your Email" aria-describedby="button-addon2">
+
+
+                    <div class="subcribe-input">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2">subscribe</button>
+                    </div>
+
+                  </div>
+                  <!-- end b4-button-addon -->
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="information">
             <div class="container">
               <div class="row">
@@ -426,5 +446,11 @@
         </div>
 
         <!-- end footer -->
-</body>
-</html>
+
+
+      </body>
+      </html>
+
+      <!-- use b4-modal for username, password -->
+
+  <!-- b4-popover move on top -->

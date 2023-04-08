@@ -93,12 +93,34 @@
               // }
             }
           </script>
+             <script type="text/javascript">
+          $(document).ready(function(){
+              const navs = document.querySelectorAll('.nav-item');
+              const hostname = window.location.pathname;
+              const namePageArr = hostname.split('/');
+              const namePage = namePageArr[namePageArr.length - 1];
+              navs && navs.forEach((nav, index) => {
+                const hrefTag = nav.querySelector('.nav-link');
+              
+
+                if(hrefTag.getAttribute('href').includes(namePage)){
+                  nav.classList.add('active');
+                }else {
+                  nav.classList.remove('active');
+                }
+                nav.onclick = () => {
+                  navs.forEach((navItem, indexItem) => navItem.classList.remove('active'));
+                  nav.classList.add('active')
+                }
+              })
+})
+        </script>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <div class="collapse-search">
             <input type="type" placeholder="Type your search..." name="">
             </div>
             <ul class="navbar-nav mr-auto ml-auto">
-              <li class="nav-item active">
+              <li class="nav-item ">
                 <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
@@ -109,15 +131,19 @@
                 <a class="nav-link " href="./blog.html">blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="./connect.html">contact</a>
+                <a class="nav-link " href="./contact.html">contact</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " href="./about_us.html">about us</a>
+              </li>
+               <li class="nav-item">
+                <a class="nav-link " href="./brand.html">brand</a>
               </li>
             </ul>
 
           </div>
         </nav>
+
         <!-- <div class="animated infinite bounce"><i class="fas fa-shopping-basket"></i></div> -->
       </div>
     </div>
